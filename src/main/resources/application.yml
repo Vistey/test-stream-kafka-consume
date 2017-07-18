@@ -1,0 +1,17 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: input-demo
+  cloud:
+     stream:
+        kafka:
+          binder:
+            brokers: localhost
+            zk-nodes: localhost
+        bindings:
+          testInputString:
+            destination: timerTopic
+
+
+
